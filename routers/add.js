@@ -8,5 +8,5 @@ router.get("/", (req, res, next) => {
 });
 
 module.exports = app => {
-  app.use("/addtransaction", router);
+  app.use("/add", router);
 };

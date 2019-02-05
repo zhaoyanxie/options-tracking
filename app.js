@@ -3,13 +3,13 @@ const express = require("express");
 
 const app = express();
 const index = require("./routers/index");
-const allTransactions = require("./routers/allTransactions");
-const addTransaction = require("./routers/addTransaction");
+const all = require("./routers/all");
+const add = require("./routers/add");
 
 app.use(express.json());
 
 index(app);
-allTransactions(app);
-addTransaction(app);
+all(app);
+add(app);
 
 module.exports = app;
