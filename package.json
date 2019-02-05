@@ -1,0 +1,17 @@
+{
+  "name": "options-tracking",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com-zhaoyanxie:zhaoyanxie/options-tracking.git",
+  "author": "xie-zhaoyan <xiezhaoyan@amaris.ai>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.9"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  }
+}
