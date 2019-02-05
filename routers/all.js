@@ -1,11 +1,11 @@
 const express = require("express");
-const router = express.Router();
+const allService = require("../services/allService");
+const allController = require("../controllers/allController");
 
+const router = express.Router();
 router.use(express.json());
 
-router.get("/", (req, res, next) => {
-  res.json({ message: "All transactions" });
-});
+router.get("/", allService.allOptions, allController.respondWithAllOptions);
 
 module.exports = app => {
   app.use("/all", router);

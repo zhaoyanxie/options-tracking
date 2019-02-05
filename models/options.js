@@ -3,12 +3,15 @@ const mongoose = require("mongoose");
 const OptionsSchema = new mongoose.Schema({
   symbol: String,
   expiryDate: Date,
-  premium: String,
-  currentPrice: String,
-  fees: String,
+  isExpired: { Boolean, default: false },
+  strike: Number,
+  numberOfContracts: Number,
+  premium: Number,
+  currentPrice: Number,
+  fees: Number,
   underlying: {
     ticker: String,
-    price: String
+    price: Number
   }
 });
 

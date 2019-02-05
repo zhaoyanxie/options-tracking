@@ -1,11 +1,12 @@
 const express = require("express");
+const addService = require("../services/addService");
+const addController = require("../controllers/addController");
+
 const router = express.Router();
 
 router.use(express.json());
 
-router.get("/", (req, res, next) => {
-  res.json({ message: "Add transaction." });
-});
+router.post("/", addService.addOption, addController.respondWithOptionAdded);
 
 module.exports = app => {
   app.use("/add", router);
